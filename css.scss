@@ -16,4 +16,9 @@ $cinza:#C7C7C7;
     transition: color 0.3s; 
 }
 .navbar-nav .nav-link:hover {
-color: $cinza}
+color: $cinza
+}
+.navbar-nav.me-auto.my-2.my-lg-0.navbar-nav-scroll{
+    padding: 1vh;
+    margin-bottom: 10vh;
+}
