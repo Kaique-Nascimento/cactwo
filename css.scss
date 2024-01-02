@@ -1,0 +1,16 @@
+@import 'tipografia.scss';
+$preto:#000;
+$branco:#FFF;
+*{
+    font-family: $font-poppins-black;
+}
+.navbar{
+        background-color: $preto;
+}
+.navbar-nav .nav-link {
+    color: $branco; 
+    transition: color 0.3s; 
+}
+.navbar-nav .nav-link:hover {
+    color: #f39c12; 
+}

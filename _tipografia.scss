@@ -1,0 +1,37 @@
+$font-path: "../fontes/";
+
+$font-poppins-bold: "Poppins-Bold";
+$font-poppins-black: "Poppins-Black";
+$font-poppins-italico: "Poppins-Italic";
+$font-poppins-normal: "Poppins-Light";
+$fonte-titulo: "titulo";
+
+// Importe as fontes
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url('#{$font-path}#{$font-poppins-bold}.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins-Light';
+  src: url('#{$font-path}#{$font-poppins-normal}.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins-Black';
+  src: url('#{$font-path}#{$font-poppins-black}.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-Italic';
+  src: url('#{$font-path}#{$font-poppins-italico}.ttf') format('truetype');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Sequel';
+  src: url('#{$font-path}#{$fonte-titulo}.ttf') format('truetype');
+  font-style: normal;
+}
