@@ -4,9 +4,8 @@ $font-poppins-bold: "Poppins-Bold";
 $font-poppins-black: "Poppins-Black";
 $font-poppins-italico: "Poppins-Italic";
 $font-poppins-normal: "Poppins-Light";
-$fonte-titulo: "titulo";
+$fonte-titulo: "Sequel";
 
-// Importe as fontes
 @font-face {
   font-family: 'Poppins-Bold';
   src: url('#{$font-path}#{$font-poppins-bold}.ttf') format('truetype');
@@ -33,5 +32,4 @@ $fonte-titulo: "titulo";
 @font-face {
   font-family: 'Sequel';
   src: url('#{$font-path}#{$fonte-titulo}.ttf') format('truetype');
-  font-style: normal;
 }

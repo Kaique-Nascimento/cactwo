@@ -2,11 +2,19 @@
 $preto:#000;
 $branco:#FFF;
 $cinza:#C7C7C7;
-*{
-    font-family: $font-poppins-black;
+@mixin centralizar{
+    display: grid;
+  place-items: center;
 }
 @mixin centro{
     text-align: center;
+}
+*{
+    font-family: $font-poppins-black;
+}
+
+.titulo{
+    font-family: $fonte-titulo;
 }
 .navbar{
         background-color: $preto;
@@ -15,10 +23,66 @@ $cinza:#C7C7C7;
     color: $branco; 
     transition: color 0.3s; 
 }
+
 .navbar-nav .nav-link:hover {
 color: $cinza
 }
-.navbar-nav.me-auto.my-2.my-lg-0.navbar-nav-scroll{
-    padding: 1vh;
-    margin-bottom: 10vh;
+#logo{
+    margin-left: 6vh;
 }
+.navbar-toggler, .navbar-toggler-icon{
+    background-color: $cinza;
+    border:solid #000 2px;
+    border-radius: 10px;
+    border: none;
+}
+#navbarScroll{
+transition: all 0.5s;
+}
+#fundo-bem-vindo{
+    background: url(../img/fundo-teste.png);
+
+}
+#fotinha{
+    clip-path: circle(50% at 50% 50%);
+}
+.custom-list {
+    list-style-type: none;
+    display: inline;
+  }
+  
+  .custom-list li::before {
+    content: "🌵";
+    display: inline-block;
+    margin-right: 10px;
+    transform: translateY(2px);
+    transition: all 0.5s;
+  }
+  
+  .custom-list li.active::before {
+    transform: rotate(90deg) translateY(2px);
+  }
+  
+  .custom-list h3 {
+    font-family: $fonte-titulo;
+    font-size: x-large;
+    transition: all 0.5s;
+  }
+  
+  .custom-list li p {
+    display: none;
+  }
+  
+  .custom-list li.active p {
+    display: block;
+  }
+  
+  /* Estilo para os botões dentro do último item da lista */
+  .custom-list li:last-child button {
+    margin-right: 5px; /* Ajuste conforme necessário para o espaçamento entre os botões */
+  }
+  
+  
+  
+
+  

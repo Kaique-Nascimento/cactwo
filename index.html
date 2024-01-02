@@ -9,9 +9,9 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a href="index.html" class="nav-link active">
-            <img id="img-tema" src="img/logo2.jpg" width="150em"/></a>
+        <div class="container-fluid mx-auto">
+          <a href="index.html" class="mx-auto nav-link active d-flex justify-content-center">
+            <img id="logo" src="img/logo2.jpg" width="140em"/></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -23,34 +23,66 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarScroll">
+          <div class="collapse navbar-collapse text-center" id="navbarScroll">
             <ul
-              class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-              style="--bs-scroll-height: 100px"
+              class="navbar-nav ml-3"
             >
+
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html"
                   >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="livros.html">Portifólio</a>
+                <a class="nav-link" href="#portifolio">Portifólio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="autores.html">Contatos</a>
+                <a class="nav-link" href="#contatos">Contatos</a>
               </li>
             </ul>
-          <!--  <input type="checkbox" id="tema" />
-            <i
-              id="icone-tema"
-              class="fa-solid fa-6x fa-sun"
-              style="color: #fff"
-            ></i>
-          -->
+ 
           </div>
         </div>
       </nav>
-<h1 class="text-center">Bem-Vindos à Cactwo!</h1>
+      <div id="fundo-bem-vindo">
+<h1 class="text-center text-light titulo">Bem-Vindos à Cactwo!</h1>
+<div class="container text-light mt-5">
+  <div class="row">
+    <div class="col-md">
+<img src="img/aaa.jpeg" id="fotinha" width="70%">     
+<img src="img/logue.png" width="70%">     
+    </div>
+    <div class="col-md text-center">
+<br>
+<ul class="custom-list">
+  <li>
+    <h3>Quem somos?</h3>
+    <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+  </li>
+  <li>
+    <h3>Uma pergunta qualquer?</h3>
+    <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+  </li>
+  <li>
+    <h3>Como posso entrar em contato?</h3>
+    <p>por meio dessas bostas<br>
+      <button>Linkedin</button>  <button>Instagram</button>     <button>Whatsapp</button>
+    </p>
+  </li>
+</ul>
+
+
+<script>
+  document.querySelectorAll('.custom-list li').forEach(function (item) {
+  item.addEventListener('click', function () {
+    this.classList.toggle('active');
+  });
+});
+
+</script>
+</div>
+  </div>
+</div>
 <script src="bootstrap/js/bootstrap.min.js"> </script>
 </body>
 </html>

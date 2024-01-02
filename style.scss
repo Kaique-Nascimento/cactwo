@@ -1,0 +1,42 @@
+@import "tamanho.scss";
+
+$cor1: #0f0;
+body{
+    background-color: green;
+}
+.borda{
+    border: solid red 10px;
+    border-radius: 20px;
+    background-color: $cor1;
+}
+@mixin texto_centro{
+    text-align: center;
+}
+h1{
+    @extend .borda;
+    margin-top: -1%;
+    font-size: $tamanho;
+    @include texto_centro;
+}
+section{
+    border: solid limegreen 1px;
+    background-color: black;
+    @include texto_centro;
+    #piada{
+        color: blue;
+        background-color: white;
+        margin-top: -50%
+    }
+    h4{
+        color: white;
+    }
+}
+@mixin borda{
+    border: solid red 10px;
+    border-radius: 20px;
+    background-color: $cor1;
+}
+p{
+    @include borda;
+    margin-top: -30%
+}
