@@ -1,8 +1,12 @@
 @import 'tipografia.scss';
 $preto:#000;
 $branco:#FFF;
+$cinza:#C7C7C7;
 *{
     font-family: $font-poppins-black;
+}
+@mixin centro{
+    text-align: center;
 }
 .navbar{
         background-color: $preto;
@@ -12,5 +16,4 @@ $branco:#FFF;
     transition: color 0.3s; 
 }
 .navbar-nav .nav-link:hover {
-    color: #f39c12; 
-}
+color: $cinza}
