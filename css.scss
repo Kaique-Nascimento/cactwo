@@ -70,6 +70,7 @@ transition: all 0.5s;
 .custom-list {
     list-style-type: none;
     margin-top: -13%;
+    margin-left:-4vh;
   }
   
   .custom-list li::before {
@@ -109,9 +110,11 @@ transition: all 0.5s;
   .custom-list li:last-child button {
     margin-right: 5px;
   }
-  
+  .icone-branco{
+    fill: $branco;
+  }
   
   
   
 
-  
+ 

@@ -7536,7 +7536,6 @@ textarea.form-control-lg{
 }
 .text-body-secondary{
     --bs-text-opacity:1;
-    color:var(--bs-secondary-color)!important
 }
 .text-body-tertiary{
     --bs-text-opacity:1;
