@@ -91,24 +91,20 @@
                         </p>
                      </li>
                   </ul>
-                  <script>
-                     function toggleDetails(element) {
-                       const liElement = element.parentElement;
-                       liElement.classList.toggle('active');
-                       const pElement = liElement.querySelector('p');
-                       if (pElement) {
-                         pElement.classList.toggle('visible');
-                       }
-                     }
-                     
-                  </script>
                </div>
             </div>
          </div>
          <div id="fundo-verde">
 
-         <h1 class="text-center"> Portifólio </h1>
-         <button id="ver-mais"class="d-flex justify-content-start ms-auto">Ver mais</button>
+         <h1 class="text-center" id="portifolio"> Portifólio </h1>
+         <button id="ver-mais" class="btn d-flex justify-content-start align-items-center ms-auto normal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-list me-2" viewBox="0 0 16 16">
+              <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+              <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+          </svg>
+          Ver mais
+      </button>
+      
          <div class="container text-light text-center mt-5 d-flex justify-content-center">
               
               
@@ -162,15 +158,34 @@
                       </a>
                       </div>
                     </li>
-
-
-
                   </ul>
                 </div>
               </section>  
-              <script>
-document.addEventListener('DOMContentLoaded', function () {
-    var splide = new Splide('.splide', {
+                      <script>
+    var verMaisButton = document.getElementById('ver-mais');
+
+    if (verMaisButton) {
+        verMaisButton.addEventListener('click', function () {
+            var splide = document.querySelector('.splide');
+            if (splide) {
+                splide.classList.toggle('hide');
+                verMaisButton.classList.toggle('normal');
+                verMaisButton.classList.toggle('apertado');
+            }
+        });
+    }
+
+
+                     function toggleDetails(element) {
+                       const liElement = element.parentElement;
+                       liElement.classList.toggle('active');
+                       const pElement = liElement.querySelector('p');
+                       if (pElement) {
+                         pElement.classList.toggle('visible');
+                       }
+                     }
+                     document.addEventListener('DOMContentLoaded', function () {
+                      var splide = new Splide('.splide', {
         type: 'loop',
         perPage: 3,
         focus: 0,
@@ -183,7 +198,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     splide.mount();
+
 });
+
+
 
 
 

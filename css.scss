@@ -10,9 +10,7 @@ $verde-cactwo:#38453E;
   display: flex;
   justify-content: center;
 }
-.card{
-  margin-right: 20px;
-}
+
 @mixin borda($cor){
     background-color: $cor;
     color: $branco;
@@ -22,6 +20,12 @@ $verde-cactwo:#38453E;
     border-radius: 10px;    
     padding: 1%;
     margin-right: 3%;
+}
+html{
+  scroll-behavior: smooth;
+}
+.card{
+  margin-right: 20px;
 }
 .portifolio-items{
   @include borda($cor: $branco);
@@ -66,7 +70,7 @@ $verde-cactwo:#38453E;
 #whatsapp{
     @include borda($cor:$verde-whatsapp);
 }
-#ver-mais{
+.normal{
     @include borda($cor:$verde-cactwo);
     color: $branco;
     padding: 0.1% 0.3% 0.1% 0.3%;
@@ -77,16 +81,21 @@ $verde-cactwo:#38453E;
       background-color: $branco;
       color: $preto;
     }
-    &:focus{
-      transition: all 0.5s ease-in;
-
-      background-color: $branco;
-      color: $preto; 
-    }
 }
+.apertado{
+  @include borda($cor:$branco);
+  padding: 0.1% 0.3% 0.1% 0.3%;
+  transition: all 0.5s ease-in;
+  color: $preto;
+}
+
 *{
     font-family: $font-poppins-black;
 }
+.hide {
+    display: none !important;
+}
+
 
 .titulo{
     font-family: $fonte-titulo;
