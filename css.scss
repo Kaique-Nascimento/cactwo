@@ -5,13 +5,53 @@ $cinza:#C7C7C7;
 $azul-linkedin:#0073B1;
 $verde-whatsapp:#006400;
 $laranja-instagram:#f09433;
+$verde-cactwo:#38453E;
+@mixin centro(){
+  display: flex;
+  justify-content: center;
+}
+.card{
+  margin-right: 20px;
+}
 @mixin borda($cor){
     background-color: $cor;
     color: $branco;
     border: solid $branco 1px;
-    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;    
     padding: 1%;
     margin-right: 3%;
+}
+.portifolio-items{
+  @include borda($cor: $branco);
+  padding: 0;
+  color: $preto;
+  img{
+    @include centro();
+    max-width: 400px;
+  }
+  a{
+    color: $preto;
+    transition: all 0.5s;
+
+    &:hover{
+      color: $cinza;
+      transition: all 0.5s;
+    }
+  }
+}
+.splide {
+  max-height: 400px; /* Ajuste a altura conforme necessário */
+  overflow: hidden;
+}
+
+.splide__slide {
+  display: flex;
+}
+
+.card.portifolio-items {
+  margin-right: 15px; /* Ajuste o espaçamento entre os cards conforme necessário */
 }
 #linkedin{
     @include borda($cor:$azul-linkedin);
@@ -25,6 +65,24 @@ $laranja-instagram:#f09433;
 }
 #whatsapp{
     @include borda($cor:$verde-whatsapp);
+}
+#ver-mais{
+    @include borda($cor:$verde-cactwo);
+    color: $branco;
+    padding: 0.1% 0.3% 0.1% 0.3%;
+    transition: all 0.5s ease-in;
+    &:hover{
+      transition: all 0.5s ease-in;
+
+      background-color: $branco;
+      color: $preto;
+    }
+    &:focus{
+      transition: all 0.5s ease-in;
+
+      background-color: $branco;
+      color: $preto; 
+    }
 }
 *{
     font-family: $font-poppins-black;
@@ -110,10 +168,18 @@ transition: all 0.5s;
   .custom-list li:last-child button {
     margin-right: 5px;
   }
-  .icone-branco{
-    fill: $branco;
+
+
+  #fundo-verde{
+    background-color: $verde-cactwo;
+    color: $branco;
+    h1{
+    font-family: $fonte-titulo;
   }
-  
+}
+.splide__arrows.splide__arrows--ltr{
+  display: none;
+}
   
   
 

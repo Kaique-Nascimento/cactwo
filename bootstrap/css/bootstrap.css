@@ -3887,7 +3887,6 @@ textarea.form-control-lg{
     --bs-navbar-toggler-icon-bg:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 }
 .card{
-    --bs-card-spacer-y:1rem;
     --bs-card-spacer-x:1rem;
     --bs-card-title-spacer-y:0.5rem;
     --bs-card-title-color: ;
@@ -3900,23 +3899,17 @@ textarea.form-control-lg{
     --bs-card-cap-padding-y:0.5rem;
     --bs-card-cap-padding-x:1rem;
     --bs-card-cap-bg:rgba(var(--bs-body-color-rgb), 0.03);
-    --bs-card-cap-color: ;
-    --bs-card-height: ;
-    --bs-card-color: ;
     --bs-card-bg:var(--bs-body-bg);
     --bs-card-img-overlay-padding:1rem;
     --bs-card-group-margin:0.75rem;
     position:relative;
     display:flex;
-    flex-direction:column;
     min-width:0;
     height:var(--bs-card-height);
     color:var(--bs-body-color);
     word-wrap:break-word;
     background-color:var(--bs-card-bg);
     background-clip:border-box;
-    border:var(--bs-card-border-width) solid var(--bs-card-border-color);
-    border-radius:var(--bs-card-border-radius)
 }
 .card>hr{
     margin-right:0;
