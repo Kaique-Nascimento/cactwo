@@ -2,12 +2,30 @@
 $preto:#000;
 $branco:#FFF;
 $cinza:#C7C7C7;
-@mixin centralizar{
-    display: grid;
-  place-items: center;
+$azul-linkedin:#0073B1;
+$verde-whatsapp:#006400;
+$laranja-instagram:#f09433;
+@mixin borda($cor){
+    background-color: $cor;
+    color: $branco;
+    border: solid $branco 1px;
+    border-radius: 10px;
+    padding: 1%;
+    margin-right: 3%;
 }
-@mixin centro{
-    text-align: center;
+#linkedin{
+    @include borda($cor:$azul-linkedin);
+}
+#instagram{
+    @include borda($cor:$laranja-instagram);
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+      
+}
+#whatsapp{
+    @include borda($cor:$verde-whatsapp);
 }
 *{
     font-family: $font-poppins-black;
@@ -51,7 +69,7 @@ transition: all 0.5s;
 }
 .custom-list {
     list-style-type: none;
-    display: inline;
+    margin-top: -13%;
   }
   
   .custom-list li::before {
@@ -59,7 +77,7 @@ transition: all 0.5s;
     display: inline-block;
     margin-right: 10px;
     transform: translateY(2px);
-    transition: all 0.5s;
+    transition: transform 0.5s ease;
   }
   
   .custom-list li.active::before {
@@ -73,17 +91,25 @@ transition: all 0.5s;
   }
   
   .custom-list li p {
-    display: none;
+    font-family: $font-poppins-normal;
+    font-weight: 500;
+    margin-top: 2%;
+    opacity: 0; /* Inicia com a opacidade 0 para ficar invisível */
+    transition: opacity 0.5s ease; /* Adiciona transição para a opacidade */
   }
   
   .custom-list li.active p {
-    display: block;
+    opacity: 1; /* Torna o texto visível quando está ativo */
   }
   
-  /* Estilo para os botões dentro do último item da lista */
-  .custom-list li:last-child button {
-    margin-right: 5px; /* Ajuste conforme necessário para o espaçamento entre os botões */
+  .custom-list li {
+    margin-top: 10%;
   }
+  
+  .custom-list li:last-child button {
+    margin-right: 5px;
+  }
+  
   
   
   
