@@ -6,11 +6,37 @@ $azul-linkedin:#0073B1;
 $verde-whatsapp:#006400;
 $laranja-instagram:#f09433;
 $verde-cactwo:#38453E;
+$fundo-scroll: #262626;
+$scroll-negocio: #8d713f;
 @mixin centro(){
   display: flex;
   justify-content: center;
 }
 
+body {
+  background-color: $preto;
+  --sb-track-color: $fundo-scroll;
+  --sb-thumb-color: $scroll-negocio;
+  --sb-size: 12px;
+
+  scrollbar-color: var(--sb-thumb-color) 
+                   var(--sb-track-color);
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size) 
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 12px;
+  border: 1px solid $scroll-negocio;
+  }
 @mixin borda($cor){
     background-color: $cor;
     color: $branco;
