@@ -134,6 +134,11 @@ html{
 .titulo{
     font-family: $fonte-titulo;
 }
+.text-center{
+  h5, h1{
+    font-family: $fonte-titulo;
+  }
+}
 .navbar{
         background-color: $preto;
 }
