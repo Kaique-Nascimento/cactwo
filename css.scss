@@ -153,7 +153,7 @@ color: $cinza
 }
 .navbar-toggler, .navbar-toggler-icon{
     background-color: $cinza;
-    border:solid #000 2px;
+    border:solid $preto 2px;
     border-radius: 10px;
     border: none;
 }
@@ -223,18 +223,22 @@ transition: all 0.5s;
 .splide__arrows.splide__arrows--ltr{
   display: none;
 }
+/*
+#fundoCacto {
+  min-width: 400px;
+  max-width: 100%;
+  height: auto;
+  background: url(../img/fundo-cactosinhos.png);
+  background-repeat: no-repeat;
+  color: $branco;
+  border: solid $branco;
 
-  #fundoCacto{
-    background: rgba(0, 0, 0, 0.7) url('https://www.blogson.com.br/wp-content/uploads/2017/06/Sergio-Monte-Verde-204x300.jpg.webp');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: darken;
-    color: $branco;
-    h1, h5{
-      font-family: $fonte-titulo;
-    }
+  h1, h5 {
+    font-family: $fonte-titulo;
   }
+}
+*/
+
  .botao-verde{
   background-color: $verde-cactwo;
   color: $branco;
